@@ -52,11 +52,9 @@ Multiple	A class inherits from multiple base classes.
 Multilevel	Grandparent → Parent → Child.
 Hierarchical	Multiple classes inherit from a single base class.
 Hybrid	Combination of two or more types.
+```
 📌 Example: Single Inheritance
 
-cpp
-Copy
-Edit
 class Animal {
 public:
     void eat() { cout << "Eating...\n"; }
@@ -72,13 +70,12 @@ int main() {
     d.eat();  // Inherited
     d.bark(); // Own method
 }
+```
+```
 📌 4. Diamond Problem & Virtual Inheritance
 When a class inherits from two classes that share a common base class, ambiguity arises.
 Solution: Use virtual inheritance.
 
-cpp
-Copy
-Edit
 class A { public: void show() { cout << "Class A\n"; } };
 class B : virtual public A {};
 class C : virtual public A {};
@@ -88,16 +85,17 @@ int main() {
     D obj;
     obj.show();  // No ambiguity
 }
+```
+```
 📌 5. Polymorphism
 Types:
 
 Compile-time Polymorphism (Function & Operator Overloading)
 Run-time Polymorphism (Method Overriding using Virtual Functions)
+
 📌 Function Overloading Example
 
-cpp
-Copy
-Edit
+
 class Math {
 public:
     int add(int a, int b) { return a + b; }
@@ -105,9 +103,6 @@ public:
 };
 📌 Method Overriding Example (Using Virtual Functions)
 
-cpp
-Copy
-Edit
 class Parent {
 public:
     virtual void show() { cout << "Parent class\n"; }
@@ -122,6 +117,8 @@ int main() {
     Parent* p = new Child();
     p->show();  // Calls Child's show()
 }
+```
+```
 📌 6. Operator Overloading (Adding Complex Numbers)
 Operator overloading allows user-defined types to use operators like +.
 
@@ -145,6 +142,8 @@ int main() {
     Complex c3 = c1 + c2;
     c3.display();  // Output: 6 + 8i
 }
+```
+```
 📌 7. Friend Function (Accessing Private Members)
 A friend function is not a class member but can access private data.
 
@@ -163,6 +162,8 @@ public:
 void display(const Sample& s) {
     cout << "The number is: " << s.num << endl;
 }
+```
+```
 📌 8. Use of const in C++
 const prevents modification of variables or methods.
 
@@ -179,20 +180,11 @@ public:
         cout << "Data: " << data << endl;
     }
 };
+```
 📌 Contributions 🤝
 Feel free to fork this repository and contribute with improvements, examples, and explanations!
 
 📌 License 📝
 This project is open-source and available under the MIT License.
-
-yaml
-Copy
-Edit
-
----
-
-## **📌 Next Steps**
-- **Save this file as `README.md`.**
-- **Push it to your GitHub repository.**
 
 Let me know if you need **changes, additions, or formatting improvements**! 🚀
